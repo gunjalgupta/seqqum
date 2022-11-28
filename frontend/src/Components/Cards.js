@@ -42,7 +42,7 @@ const Cards = ({newUrl, newTitle, newPublishedAt, newImage, newAuthor }) => {
         const requestBody = {
           link: link
         }
-        const res = await axios.post("http://127.0.0.1:5000/summarizer", requestBody);
+        const res = await axios.post("http://172.31.56.1:5000/summarizer", requestBody);
         setSummary(res.data.summary);
         console.log("summary", res);
       }
