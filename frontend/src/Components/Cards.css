@@ -1,0 +1,8 @@
+.cardsLink{
+    color: black;
+    text-decoration: none;
+}
+
+.cardsLink:hover{
+    text-decoration: underline;
+}

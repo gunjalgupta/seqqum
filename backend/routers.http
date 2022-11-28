@@ -1,0 +1,55 @@
+GET https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=99bc1a83de634471958f7d9c6bbf0431
+
+###
+
+GET https://newsapi.org/v2/top-headlines?country=us&category=sports&apiKey=99bc1a83de634471958f7d9c6bbf0431
+
+###
+
+POST http://127.0.0.1:5000/summarizer
+Content-Type: application/json
+
+{
+    "link" : "https://sports.yahoo.com/mlb-playoffs-yankees-astros-alcs-game-1-justin-verlander-aaron-judge-jameson-taillon-222714652.html"
+}
+
+###
+
+GET https://newsapi.org/v2/top-headlines/sources?apiKey=99bc1a83de634471958f7d9c6bbf0431
+
+###
+GET https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=99bc1a83de634471958f7d9c6bbf0431
+
+###
+POST http://127.0.0.1:8000/userRouter/register
+Content-Type: application/json
+
+{
+    "email" : "lgrekhov98@gmail.com",
+    "password" : "123456"
+}
+
+###
+POST http://localhost:8000/favRouter/addfav
+Content-Type: application/json
+
+{
+    "userId": "637519bef74b8e01763e1df7",
+    "title": "New CEO Says FTX Suffered 'Complete Failure of Corporate Controls' - The Wall Street Journal",
+    "author": "Charley Grant, Eric Wallerstein, Eliot Brown, Elaine Yu, Joe Wallace, Caitlin McCabe, Dave Sebastian, Anna Hirtenstein",
+    "publishAt": "2022-11-17T13:29:18Z",
+    "image": "https://images.wsj.net/im-589547/social",
+    "url": "https://www.wsj.com/livecoverage/stock-market-news-today-11-17-2022"
+}
+
+###
+GET http://localhost:8000/favRouter/removefav
+
+###
+POST http://localhost:8000/favRouter/check
+Content-Type: application/json
+
+{
+    "userId":  "63765aeb3174c2137b0800d6",
+    "title": "MH17: Three guilty as court finds Russia-controlled group downed airliner - BBC"   
+}
