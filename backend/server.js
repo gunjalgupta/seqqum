@@ -32,6 +32,8 @@ app.use('/userRouter', userRouter)
 const favRouter = require('./routes/favRouter')
 app.use('/favRouter', favRouter)
 
+const newsRouter = require('./routes/newsRoute')
+app.use('/newsRoute', newsRouter)
 
 
-app.listen(8000, () => console.log('Server Started'));
+app.listen(8000, '127.0.0.1', () => console.log('Server Started'));

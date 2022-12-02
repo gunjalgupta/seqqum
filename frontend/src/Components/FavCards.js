@@ -39,7 +39,8 @@ const FavCards = () => {
     const requestBody = {
       link: link
     }
-    const res = await axios.post("http://127.0.0.1:5000/summarizer", requestBody);
+    console.log(requestBody)
+    const res = await axios.post("http://34.223.57.92:5000/summarizer", requestBody);
     setSummary(res.data.summary);
     console.log("summary", res);
   }
@@ -74,7 +75,7 @@ const FavCards = () => {
                   <BookmarkIcon />
                 </span>
               </IconButton>
-             { option.summary === "" ? <Button onClick={event => summarizer(event, option.url)}>Summarise </Button> : <p></p>} 
+             { option.summary === "" ? <Button onClick={event => summarizer(event, option?.url)}>Summarise </Button> : <p></p>} 
             </Typography>
           </CardContent>
         </Box>
