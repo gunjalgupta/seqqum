@@ -7,7 +7,7 @@ export default function NewCards({category}) {
   const [news , setNews] = useState([]);
 
   useEffect(() => {
-     axios.get(`http://localhost:8000/newsRoute/getnews?category=${category}`)
+     axios.get(`http://34.125.247.13:8000/newsRoute/getnews?category=${category}`)
       .then(responseData => {
           console.log("res",responseData);
           if (responseData.data.error) {

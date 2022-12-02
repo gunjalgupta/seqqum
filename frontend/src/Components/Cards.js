@@ -23,7 +23,7 @@ const Cards = ({newUrl, newTitle, newPublishedAt, newImage, newAuthor }) => {
           title: newTitle
         };
         axios
-          .post("http://localhost:8000/favRouter/check", req)
+          .post("http://34.125.247.13:8000/favRouter/check", req)
           .then((response) => {
             if(response.data.length === 1){
                 console.log("here", response.data)
@@ -59,7 +59,7 @@ const Cards = ({newUrl, newTitle, newPublishedAt, newImage, newAuthor }) => {
           summary: summary.toString()
         }
         console.log("requestbody", cusFav)
-        const res = await axios.post("http://localhost:8000/favRouter/addfav", cusFav)
+        const res = await axios.post("http://34.125.247.13:8000/favRouter/addfav", cusFav)
         console.log("add",res)
       }
 
@@ -69,7 +69,7 @@ const Cards = ({newUrl, newTitle, newPublishedAt, newImage, newAuthor }) => {
             userId: localStorage.getItem("userId"),
             title
         }
-        const res = await axios.post("http://localhost:8000/favRouter/removefav", requestData)
+        const res = await axios.post("http://34.125.247.13:8000/favRouter/removefav", requestData)
         console.log("remove", res)
       }
 

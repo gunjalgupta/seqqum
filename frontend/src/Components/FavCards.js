@@ -21,7 +21,7 @@ const FavCards = () => {
       const user = {
           userId : localStorage.getItem("userId")
       } 
-      await axios.post("http://localhost:8000/favRouter/showfavourite", user)
+      await axios.post("http://34.125.247.13:8000/favRouter/showfavourite", user)
       .then(responseData => {
           console.log("res",responseData);
           if (responseData.data.error) {
@@ -51,7 +51,7 @@ const FavCards = () => {
         userId: localStorage.getItem("userId"),
         title
     }
-    const res = await axios.post("http://localhost:8000/favRouter/removefav", requestData)
+    const res = await axios.post("http://34.125.247.13:8000/favRouter/removefav", requestData)
     console.log("remove", res)
   }
     return (<div>

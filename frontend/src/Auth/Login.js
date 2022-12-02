@@ -17,7 +17,7 @@ function Login() {
                 email,
                 password,
             };
-            const res = await axios.post("http://localhost:8000/userRouter/login",loginAdmin,)
+            const res = await axios.post("http://34.125.247.13:8000/userRouter/login",loginAdmin,)
             console.log("------",res.data.data._id)
             if(res.status === 200) {
             localStorage.setItem("email", email);
